@@ -1,19 +1,35 @@
 Here are featured projects that I have worked on. Feel free to check them out!
 
-<div class="courses-container">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="text-decoration: none;">
-        <div class="course">
-            <div class="course-preview">
-                <img src="https://i.ytimg.com/vi/ldTGlq6HclQ/hqdefault.jpg">
+<!--
+Cards have:
+  -link
+  -image
+  -title
+  -description
+  -short descriptive tags
+-->
+{% for page in site.pages %}
+        {% if page.isProject %}
+            <div class="card">
 
+                <a href={{page.url}} style="text-decoration: none;">
+                <div class="card-container">
+                    <div class="card-image"><img src={{page.image}}></div>
+                    <div class="card-info">
+                        <article>
+                            <div class="card-title">
+                                {{page.title}}
+                            </div>
+                            <div class="card-description">
+                                {{page.description}}
+                            </div>
+                            <div class="card-tag">
+                                {{page.tags}}
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                </a>
             </div>
-            <div class="course-info">
-                <article>
-                    <h3>I dare you to click on this</h3>
-                    <h6>You won't do it.</h6>
-                    <span>Memes</span>
-                </article>
-            </div>
-        </div>
-    </a>
-</div>
+        {% endif %}
+{% endfor %}

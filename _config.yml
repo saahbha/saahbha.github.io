@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -21,11 +21,11 @@
 title: Saahil Bhatia
 email: SaahilBhatia2013@Outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The personal website of Saahil Bhatia
+  B.S. in Computer Science
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # OMITTING TWITTER: twitter_username: jekyllrb
-github_username:  saahbha
+github_username: saahbha
 
 # Build settings
 theme: jekyll-theme-hydeout
@@ -35,7 +35,6 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

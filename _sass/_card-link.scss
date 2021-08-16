@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import "hydeout/type";
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+Cards have:
+  -link
+  -image
+  -title
+  -description
+  -short descriptive tags
+*/
+
+.card {
+}
+
+.card-container {
+  text-decoration: none;
+  background-color: lighten($sidebar-bg-color, 5%);
+  border-radius: 3px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  margin: 20px;
+  overflow: hidden;
+  padding: 0px;
+  color: #fff;
+
+  &:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px $gray-5;
+    text-decoration: none;
+    background: lighten($sidebar-bg-color, 10%);
+    color: #fff;
+  }
+}
+
+.card-image {
+  background-color: lighten($sidebar-bg-color, 5%);
+  color: #fff;
+
+  max-width: 250px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image img {
+  color: #fff;
+
+  max-width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  background-repeat: repeat;
+  display: flex;
+
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.card-info article {
+  padding: 0px;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  @extend h3;
+  letter-spacing: 1px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.card-description {
+  @extend h6;
+  font-size: 0.85em;
+  font-weight: normal;
+  opacity: 0.55;
+  letter-spacing: 1px;
+  margin: 0;
+  color: #fff;
+}
+
+.card-tag {
+  font-size: 12px;
+  font-weight: bold;
+
+  margin: 2em 2em 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $tag-color;
+}
+
+//take out picture based on window size
+@media (max-width: 1080px) {
+  .card-image {
+    display: none;
+  }
+}
