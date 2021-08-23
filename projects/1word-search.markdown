@@ -195,13 +195,13 @@ A variation of the pseudocode for the Boyer-Moore Algorithm is as follows.
 
 ```Java
 //T: A string to search in
-//P: A word to find in P
+//P: A word to find
 //∑: The set of all letters in T and P
 Algorithm BoyerMoore(T, P, ∑)
 	L = lastOccurenceFunction(P, ∑)
 	m = P.length    //length of the word
-        i = m - 1       //increments over the word
-        j = m - 1       //increments over the string
+        i = m - 1       //increments over the string
+        j = m - 1       //increments over the word
 	Repeat
 		If T[i] == P[j] //If matched
 			If j = 0 //finished searching the section with no mismatches
